@@ -1,4 +1,4 @@
-# Identity Assurance Levels and Risk Management
+# 2 Identity Assurance Levels and Risk Management
 
 NIST SP 800-63A divides identity proofing requirements into three different assurance levels: Identity Assurance Levels, or IALs, 1, 2 and 3. At each level the document describes unique requirements for the processes, techniques, and approaches that may be taken by agencies and organizations, with increasing levels of stringency. These levels align with the Levels of Assurance, or LOA’s, in Office of Management and Budget’s Memorandum M-04-04, *E-Authentication Guidance for Federal Agencies*, which outlines overall identity assurance levels based on risk and potential impacts of a system compromise to the agency and users. This alignment and SP 800-63A’s descriptions of assurance levels have been outlined in Table 1.
 
@@ -10,13 +10,13 @@ NIST SP 800-63A divides identity proofing requirements into three different assu
 
 **Table 1:** Identity Assurance Levels in SP 800-63A and OMB M-04-04
 
-Agencies and service providers building or acquiring identity solutions are expected to conduct a thorough risk assessment of their systems –including assessments of both privacy and security risks-- and understand the risks associated with the resources, data, and applications being accessed via a specific identity management solution. This document does not provide guidance on how to conduct these risk assessment, but readers can find further information in resources such as the aforementioned M-04-04; NIST Special Publication 800-53, *Security and Privacy Controls for Federal Information Systems and Organizations*; or Federal Information Processing Standards publication 199, *Standards for Security Categorization of Federal Information and Information Systems*. 
+Agencies and service providers building or acquiring identity solutions are expected to conduct a thorough risk assessment of their systems—including assessments of both privacy and security risks—and understand the risks associated with the resources, data, and applications being accessed via a specific identity management solution. This document does not provide guidance on how to conduct these risk assessment, but readers can find further information in resources such as the aforementioned M-04-04; NIST Special Publication 800-53, *Security and Privacy Controls for Federal Information Systems and Organizations*; or Federal Information Processing Standards publication 199, *Standards for Security Categorization of Federal Information and Information Systems*. 
 
-Additionally, agencies and service providers are expected to employ appropriately tailored security controls from the moderate baseline of security controls defined in NIST SP800-53 or equivalent industry standard and ensure that the minimum assurance requirements associated with the moderate baseline are satisfied.
+Additionally, agencies and service providers are expected to employ appropriately tailored security controls from the moderate baseline of security controls defined in NIST SP 800-53 or equivalent industry standard and ensure that the minimum assurance requirements associated with the moderate baseline are satisfied.
 
-## Selecting an IAL
+## 2.1 Selecting an IAL
 
-Managing the risk assessment process and selecting the assurance level can be challenging. To assist agencies through the process, NIST has built the framework around identity assurance levels summarized in Table 1 and provided selection guidance in SP800-63A. Assurance in a subscriber’s identity is described using one of three Identity Assurance Levels, or IALs. The IAL selection process, as presented in NIST800-63-3, has been illustrated in Figure 2. Broadly categorizing all subsystems at the same level of identity assurance may not be ideal and it should be recognized that systems with different IAL1 and IAL2 or IAL3 compartments may need to be partitioned with respect to their specific identity assurance level requirements, leading the implementations to be done accordingly.
+Managing the risk assessment process and selecting the assurance level can be challenging. To assist agencies through the process, NIST has built the framework around identity assurance levels summarized in Table 1 and provided selection guidance in SP800-63A. Assurance in a subscriber’s identity is described using one of three Identity Assurance Levels, or IALs. The IAL selection process, as presented in SP 800-63-3, has been illustrated in Figure 2. Broadly categorizing all subsystems at the same level of identity assurance may not be ideal and it should be recognized that systems with different IAL1 and IAL2 or IAL3 compartments may need to be partitioned with respect to their specific identity assurance level requirements, leading the implementations to be done accordingly.
 
 ![Figure 2: Selecting an IAL](https://github.com/usnistgov/800-63-3/blob/nist-pages/sp800-63-3/media/IAL_CYOA.png)
 
@@ -53,7 +53,7 @@ As with the other content in this document the IAL selection guidance is intende
 
 As seen in the case example, there is no proof requirement until IAL2.
 
-## Determining the Necessary Evidence
+## 2.2 Determining the Necessary Evidence
 
 Once the identity assurance level for a system or subsystem has been selected, the CSP can determine the evidence required for identity proofing.
 
@@ -61,21 +61,21 @@ Beside the information provided by the applicant during the enrollment process �
 
 There should be a good balance between executing the proofing process and minimizing the burden on the applicant.
 
-## Types of Evidence
+## 2.3 Types of Evidence
 
 Table 2 provides examples of evidence from each category of strength defined in the aforementioned identity evidence quality table in 800-63A.
 
 | **Strength** | **Examples** |
 | --- | --- |
-| Unacceptable | Library Cards |
+| Unacceptable | Library Card |
 | Weak | Organizational Membership Cards<br/>Birth Certificate<br/>Social Security Card |
 | Fair | Individual Tax Number<br/>Credit or Debit Card<br/> Bank Account Statement<br/>Utility Account Statement |
 | Strong | Real ID Driver’s License<br/>State ID |
-| Superior | FIPS 201 Compliant Personal Identification Verification Card (PIV, PIV-I, and CAC)<br/>National Passports<br/>Enhanced Driver’s License or Identification |
+| Superior | FIPS 201 Compliant Personal Identification Verification Card (PIV, PIV-I, and CAC)<br/>National Passport<br/>Enhanced Driver’s License or Identification |
 
 **Table 2:** Examples of Identity Evidence
 
-Please note that while examples of unacceptable and weak evidence are presented here for the sake of completeness, CSP’s should nevertheless be careful in requiring such documents as identity evidence. CSP’s should also consider birth certificates and social security cards, which contain no visual evidence with which to confirm the applicant’s identity, with special care. Moreover, CSP’s are cautioned to revisit guidance provided earlier with respect to international or common names and the event of a name change while considering evidence for strength.
+Please note that while examples of unacceptable and weak evidence are presented here for the sake of completeness, CSPs should nevertheless be careful in requiring such documents as identity evidence. CSPs should also consider birth certificates and social security cards, which contain no visual evidence with which to confirm the applicant’s identity, with special care. Moreover, CSPs are cautioned to revisit guidance provided earlier with respect to international or common names and the event of a name change while considering evidence for strength.
 
 A CSP can collect an applicant’s social security number as additional information, but two other forms of identification should still be collected to which information in the social security number should still resolve. An example selection of evidence documents for a CSP to consider in an IAL2 process are shown in the following figure.
 
@@ -83,14 +83,14 @@ A CSP can collect an applicant’s social security number as additional informat
 
 **Figure 3** Selecting Evidence
 
-Documents signed by digital watermarking (DWM) (such as driver’s license images) can also be used by CSP’s as a piece of strong evidence in identity proofing. Watermarks are embedded in images used in secure identity verification and use applications to verify the rightful owner of an evidence document. Some applications, for instance, use the applicant’s fingerprint information to watermark the image. Training of operators is also important for CSP’s to be able to expect and recognize the presence of a watermark in a piece of evidence that normally carries it, or notice when the watermark is absent for a simple binary fraud checking measure.
+Documents signed by digital watermarking (DWM) (such as driver’s license images) can also be used by CSPs as a piece of strong evidence in identity proofing. Watermarks are embedded in images used in secure identity verification and use applications to verify the rightful owner of an evidence document. Some applications, for instance, use the applicant’s fingerprint information to watermark the image. Training of operators is also important for CSPs to be able to expect and recognize the presence of a watermark in a piece of evidence that normally carries it, or notice when the watermark is absent for a simple binary fraud checking measure.
 
-Numbers, references and checksums may also be used by CSP’s to validate strong evidence in identity proofing.
+Numbers, references and checksums may also be used by CSPs to validate strong evidence in identity proofing.
 
 Checksums are an application of the traditional digital error-checking mechanism to cryptographic security. As a concept, a checksum is a numerical sum representing the correct digits in a piece of transmitted data, enabling recipients or relaying parties to verify integrity. As a cryptographic application, the checksum is calculated by applying cryptographic algorithms to data in order to generate a hash, which is then used to validate the data. The generated hash is the checksum used for validation and the principle is that unauthorized parties would not be able to change the data without affecting the hash as they would not have visibility into the cryptographic algorithm or algorithms that were originally used by the provider to generate the hash.
 
-Checksums therefore provide a method to validate electronic evidence as well, whereby CSP’s can generate cryptographic checks to associate with documents used as evidence, which are then subject to a check for validation. This method can then be used to validate strong evidence.
+Checksums therefore provide a method to validate electronic evidence as well, whereby CSPs can generate cryptographic checks to associate with documents used as evidence, which are then subject to a check for validation. This method can then be used to validate strong evidence.
 
-Similarly, numbers or references that are associated with identity evidence such as a barcode embedded on the document can be used to validate strong evidence by CSP’s that wish to validate evidence.
+Similarly, numbers or references that are associated with identity evidence such as a barcode embedded on the document can be used to validate strong evidence by CSPs that wish to validate evidence.
 
 It is also important to make the distinction between equipment and knowledge that is the patented intellectual property of a particular vendor and is protected by patent law, and equipment and knowledge (algorithms, workflows, systems) that is proprietary to the vendor, whose internal working mechanisms are not known to outside entities that are not bound by non-disclosure agreements. Measures should be taken to ensure that proprietary systems and equipment produce results that are trusted by the CSP.
